@@ -13,6 +13,7 @@ public class SnakeAndLadder {
         int singlePlayerPosition = 0;
         System.out.println("Single Player Starts at position = " + singlePlayerPosition);
         System.out.println();
+        int count = 0;
 //UC4
         boolean currentTurn = true;
         while (singlePlayerPosition != winningPosition) {
@@ -43,7 +44,9 @@ public class SnakeAndLadder {
                         System.out.println();
                         break;
                 }
- //UC4
+//UC6
+                count++;
+//UC4
                 if (singlePlayerPosition < 0 ) {
                     singlePlayerPosition = 0;
                 }
@@ -53,6 +56,7 @@ public class SnakeAndLadder {
                 }
             }
         }
-        System.out.println("Single Player Reaches the Exact Winning Position");
+        System.out.println(" *** Single Player Reaches the Exact Winning Position *** ");
+        System.out.println("The Number Of times Dice was Played : "+count);
     }
 }
