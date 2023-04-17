@@ -16,8 +16,8 @@ public class SnakeAndLadder {
 //UC4
         boolean currentTurn = true;
         while (singlePlayerPosition != winningPosition) {
-            if (currentTurn == true) {
 
+            if (currentTurn == true) {
 //UC2
                 Random random = new Random();
                 int dice = random.nextInt(6) + 1;
@@ -43,12 +43,16 @@ public class SnakeAndLadder {
                         System.out.println();
                         break;
                 }
+ //UC4
                 if (singlePlayerPosition < 0 ) {
                     singlePlayerPosition = 0;
                 }
-
+//UC5
+                if (singlePlayerPosition > winningPosition){
+                   singlePlayerPosition -= dice;
+                }
             }
         }
-        System.out.println("Single Player Reaches The Winning Position");
+        System.out.println("Single Player Reaches the Exact Winning Position");
     }
 }
