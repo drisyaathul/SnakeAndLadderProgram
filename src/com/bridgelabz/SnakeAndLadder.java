@@ -43,7 +43,7 @@ public class SnakeAndLadder {
                         System.out.println();
                         break;
                 }
-                if (singlePlayerPosition < 0 || singlePlayerPosition > winningPosition) {
+                if (singlePlayerPosition < 0 ) {
                     singlePlayerPosition = 0;
                 }
 
